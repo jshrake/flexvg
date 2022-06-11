@@ -1,0 +1,15 @@
+{
+    "svg.preview.background": "dark-transparent",
+    "emeraldwalk.runonsave": {
+        "commands": [
+            {
+                "match": "\\.(yaml|yml|json)$",
+                "cmd": "cargo run --bin flexvg -- ${file}"
+            },
+            {
+                "match": "\\.(css)$",
+                "cmd": "cargo run --bin flexvg -- $(dirname ${file})/$(basename ${file} .css).yaml"
+            }
+        ]
+    },
+}

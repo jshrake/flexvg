@@ -1,0 +1,232 @@
+---
+  flex-direction: row
+  justify-content: flex-start
+  stylesheet: platform.css
+  width: 100%
+  height: 100%
+  nodes:
+    - flex-direction: column
+      width: 20%
+      height: 42.85714%
+      nodes:
+        - nodes:
+          - text: launcher
+            position-type: absolute
+            style: "writing-mode:tb;font-size:0.5em;"
+          - rect: true
+            class: green 
+            position-type: absolute
+    - flex-direction: column
+      width: 80%
+      height: 100%
+      nodes:
+        - nodes:
+          - width: 100%
+            nodes:
+              - nodes:
+                - text: app
+                  style: "font-size:0.3em;"
+                  position-type: absolute
+                - rect: true
+                  class: green 
+                  position-type: absolute
+              - nodes:
+                - text: app
+                  style: "font-size:0.3em;"
+                  position-type: absolute
+                - rect: true
+                  class: green 
+                  position-type: absolute
+              - nodes:
+                - text: app
+                  style: "font-size:0.3em;"
+                  position-type: absolute
+                - rect: true
+                  class: green 
+                  position-type: absolute
+        - nodes:
+          - nodes:
+            - text: extension
+              style: "font-size:0.19em;writing-mode:tb;"
+              position-type: absolute
+            - rect: true
+              class: green 
+              position-type: absolute
+          - nodes:
+            - text: extension
+              style: "font-size:0.19em;writing-mode:tb;"
+              position-type: absolute
+            - rect: true
+              class: green 
+              position-type: absolute
+          - nodes:
+            - text: extension
+              style: "font-size:0.19em;writing-mode:tb;"
+              position-type: absolute
+            - rect: true
+              class: green 
+              position-type: absolute
+          - nodes:
+            - text: extension
+              style: "font-size:0.19em;writing-mode:tb;"
+              position-type: absolute
+            - rect: true
+              class: green 
+              position-type: absolute
+          - nodes:
+            - text: extension
+              style: "font-size:0.19em;writing-mode:tb;"
+              position-type: absolute
+            - rect: true
+              class: green 
+              position-type: absolute
+          - nodes:
+            - text: extension
+              style: "font-size:0.19em;writing-mode:tb;"
+              position-type: absolute
+            - rect: true
+              class: green 
+              position-type: absolute
+          - nodes:
+            - text: extension
+              style: "font-size:0.19em;writing-mode:tb;"
+              position-type: absolute
+            - rect: true
+              class: green 
+              position-type: absolute
+          - nodes:
+            - text: extension
+              style: "font-size:0.19em;writing-mode:tb;"
+              position-type: absolute
+            - rect: true
+              class: green 
+              position-type: absolute
+          - nodes:
+            - text: extension
+              style: "font-size:0.19em;writing-mode:tb;"
+              position-type: absolute
+            - rect: true
+              class: green 
+              position-type: absolute
+        - nodes:
+          - text: lib
+            style: "font-size:0.5em;"
+            position-type: absolute
+          - rect: true
+            class: green 
+            position-type: absolute
+        - nodes:
+          - nodes:
+            - text: plugin
+              style: "font-size:0.25em;writing-mode:tb;"
+              position-type: absolute
+            - rect: true
+              class: green 
+              position-type: absolute
+          - nodes:
+            - text: plugin
+              style: "font-size:0.25em;writing-mode:tb;"
+              position-type: absolute
+            - rect: true
+              class: green 
+              position-type: absolute
+          - nodes:
+            - text: plugin
+              style: "font-size:0.25em;writing-mode:tb;"
+              position-type: absolute
+            - rect: true
+              class: green 
+              position-type: absolute
+          - nodes:
+            - text: plugin
+              style: "font-size:0.25em;writing-mode:tb;"
+              position-type: absolute
+            - rect: true
+              class: green 
+              position-type: absolute
+          - nodes:
+            - text: plugin
+              style: "font-size:0.25em;writing-mode:tb;"
+              position-type: absolute
+            - rect: true
+              class: green 
+              position-type: absolute
+          - nodes:
+            - text: plugin
+              style: "font-size:0.25em;writing-mode:tb;"
+              position-type: absolute
+            - rect: true
+              class: green 
+              position-type: absolute
+          - nodes:
+            - text: plugin
+              style: "font-size:0.25em;writing-mode:tb;"
+              position-type: absolute
+            - rect: true
+              class: green 
+              position-type: absolute
+          - nodes:
+            - text: plugin
+              style: "font-size:0.25em;writing-mode:tb;"
+              position-type: absolute
+            - rect: true
+              class: green 
+              position-type: absolute
+          - nodes:
+            - text: plugin
+              style: "font-size:0.25em;writing-mode:tb;"
+              position-type: absolute
+            - rect: true
+              class: green 
+              position-type: absolute
+        - nodes:
+          - text: lib
+            style: "font-size:0.5em;"
+            position-type: absolute
+          - rect: true
+            class: green 
+            position-type: absolute
+        - width: 100%
+          nodes:
+            - nodes:
+              - text: git
+                style: "font-size:0.25em;"
+                position-type: absolute
+              - rect: true
+                class: other
+                position-type: absolute
+            - nodes:
+              - text: python
+                style: "font-size:0.25em;"
+                position-type: absolute
+              - rect: true
+                class: other
+                position-type: absolute
+            - nodes:
+              - text: c++
+                style: "font-size:0.25em;"
+                position-type: absolute
+              - rect: true
+                class: other
+                position-type: absolute
+            - nodes:
+              - text: other
+                style: "font-size:0.25em;"
+                position-type: absolute
+              - rect: true
+                class: other
+                position-type: absolute
+            - nodes:
+              - text: gfx
+                style: "font-size:0.25em;"
+                position-type: absolute
+              - rect: true
+                class: other
+                position-type: absolute
+        - nodes:
+          - text: os (windows, linux)
+            style: "font-size:0.5em;"
+            position-type: absolute
+          - rect: true
+            class: other
+            position-type: absolute

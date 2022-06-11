@@ -1,0 +1,6 @@
+[workspace]
+
+members = [
+    "flexvg",
+    "flexvg-cli"
+]

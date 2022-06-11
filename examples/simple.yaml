@@ -1,0 +1,44 @@
+---
+  display: flex
+  flex-direction: row
+  align-items: flex-start
+  width: 100%
+  height: 100%
+  nodes:
+    - flex-direction: column  
+      align-self: flex-start
+      width: 100%
+      height: 100%
+      nodes:
+        - width: 100%
+          height: 40%
+          nodes:
+            - text: q
+              position-type: absolute
+            - rect: true
+              style: "fill:blue;stroke:pink;stroke-width:1;opacity:0.5;padding:1" 
+              position-type: absolute
+        - width: 100%
+          height: 100%
+          nodes:
+            - text: 🤣
+              position-type: absolute
+            - rect: true
+              style: "fill:blue;stroke:pink;stroke-width:1;opacity:0.5;padding:1" 
+              position-type: absolute
+    - width: 100%
+      height: 70%
+      nodes:
+        - text: 🤪
+          position-type: absolute
+        - rect: true
+          style: "fill:blue;stroke:pink;stroke-width:1;opacity:0.5;padding:1"
+          position-type: absolute
+    - width: 100%
+      height: 100%
+      nodes:
+        - text: 🤗
+          position-type: absolute
+        - rect: true
+          style: "fill:blue;stroke:pink;stroke-width:1;opacity:0.5;padding:1" 
+          position-type: absolute
