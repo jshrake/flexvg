@@ -11,9 +11,9 @@ use std::path::Path;
 
 use log::debug;
 use prelude::*;
-use taffy::prelude::Number as SprawlNumber;
-use taffy::prelude::Size as SprawlSize;
-use taffy::prelude::Style as SprawlStyle;
+use taffy::prelude::Number as TaffyNumber;
+use taffy::prelude::Size as TaffySize;
+use taffy::prelude::Style as TaffyStyle;
 use taffy::Taffy;
 
 pub fn compute_svg_string(
@@ -26,15 +26,14 @@ pub fn compute_svg_string(
 }
 
 fn compute_layout_root(node: FlexNode) -> Result<FlexGeomNode, Error> {
-    let size = SprawlSize {
-        height: SprawlNumber::Defined(100.0),
-        width: SprawlNumber::Defined(100.0),
+    let size = TaffySize {
+        height: TaffyNumber::Defined(100.0),
+        width: TaffyNumber::Defined(100.0),
     };
     let mut taffy = Taffy::new();
-    let stacked_sprawl_root =
-        compute_stacked_sprawl_recursive(node, &mut taffy)?;
-    taffy.compute_layout(stacked_sprawl_root.taffy_node, size)?;
-    let root = compute_layout_root_recursive(stacked_sprawl_root, &mut taffy)?;
+    let flex_taffy_root = compute_flex_taffy_recursive(node, &mut taffy)?;
+    taffy.compute_layout(flex_taffy_root.taffy_node, size)?;
+    let root = compute_layout_root_recursive(flex_taffy_root, &mut taffy)?;
     Ok(root)
 }
 
@@ -47,70 +46,41 @@ fn compute_layout_root_recursive(
         let layout_node = compute_layout_root_recursive(child, taffy)?;
         children_nodes.push(layout_node);
     }
-    let sprawl_layout = taffy.layout(parent.taffy_node)?;
+    let taffy_layout = taffy.layout(parent.taffy_node)?;
 
     Ok(FlexGeomNode {
         element: parent.element,
         position: FlexPoint {
-            x: sprawl_layout.location.x,
-            y: sprawl_layout.location.y,
+            x: taffy_layout.location.x,
+            y: taffy_layout.location.y,
         },
-        width: sprawl_layout.size.width,
-        height: sprawl_layout.size.height,
+        width: taffy_layout.size.width,
+        height: taffy_layout.size.height,
         root: parent.root,
         nodes: children_nodes,
     })
 }
 
-fn compute_stacked_sprawl_recursive(
+fn compute_flex_taffy_recursive(
     parent: FlexNode,
     taffy: &mut Taffy,
 ) -> Result<FlexTaffyNode, Error> {
     let child_len = parent.nodes.len();
-    let mut stacked_sprawl_children = Vec::with_capacity(child_len);
-    let mut sprawl_children = Vec::with_capacity(child_len);
+    let mut flex_taffy_children = Vec::with_capacity(child_len);
+    let mut taffy_children = Vec::with_capacity(child_len);
 
     for child in parent.nodes {
-        let child = compute_stacked_sprawl_recursive(child, taffy)?;
-        sprawl_children.push(child.taffy_node);
-        stacked_sprawl_children.push(child);
+        let child = compute_flex_taffy_recursive(child, taffy)?;
+        taffy_children.push(child.taffy_node);
+        flex_taffy_children.push(child);
     }
-    let sprawl_node =
-        taffy.new_node(SprawlStyle::from(parent.layout), &sprawl_children)?;
-    debug!("{:?}, {:?}", &sprawl_node, sprawl_children);
+    let taffy_node =
+        taffy.new_node(TaffyStyle::from(parent.layout), &taffy_children)?;
+    debug!("{:?}, {:?}", &taffy_node, taffy_children);
     Ok(FlexTaffyNode {
-        taffy_node: sprawl_node,
+        taffy_node,
         element: parent.element,
         root: parent.root,
-        nodes: stacked_sprawl_children,
+        nodes: flex_taffy_children,
     })
-}
-
-#[cfg(test)]
-mod tests {
-
-    use std::sync::Once;
-
-    //use crate::{compute_layout_root, compute_svg_string, StackedConfigNode};
-
-    static INIT: Once = Once::new();
-
-    pub fn initialize() {
-        INIT.call_once(|| {
-            env_logger::init();
-        });
-    }
-
-    #[test]
-    fn simple_diagram_0() {
-        initialize();
-        /*
-               let b = include_bytes!("../examples/hello-world.yaml");
-               let deserialized_point: StackedConfigNode =
-                   serde_yaml::from_slice(b).expect("deserialize from yaml");
-               let node = compute_layout_root(deserialized_point).expect("computed");
-               let svg = svg_string(&node).expect("svg");
-               std::fs::write("tmp.svg", svg).expect("Unable to write file");
-        */
-    }
 }
