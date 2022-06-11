@@ -15,6 +15,7 @@
           nodes:
             - text: q
               position-type: absolute
+              style: "dominant-baseline:middle; text-anchor:middle"
             - rect: true
               style: "fill:blue;stroke:pink;stroke-width:1;opacity:0.5;padding:1" 
               position-type: absolute
@@ -23,6 +24,7 @@
           nodes:
             - text: 🤣
               position-type: absolute
+              style: "dominant-baseline:middle; text-anchor:middle"
             - rect: true
               style: "fill:blue;stroke:pink;stroke-width:1;opacity:0.5;padding:1" 
               position-type: absolute
@@ -31,6 +33,7 @@
       nodes:
         - text: 🤪
           position-type: absolute
+          style: "dominant-baseline:middle; text-anchor:middle"
         - rect: true
           style: "fill:blue;stroke:pink;stroke-width:1;opacity:0.5;padding:1"
           position-type: absolute
@@ -39,6 +42,7 @@
       nodes:
         - text: 🤗
           position-type: absolute
+          style: "dominant-baseline:middle; text-anchor:middle"
         - rect: true
           style: "fill:blue;stroke:pink;stroke-width:1;opacity:0.5;padding:1" 
           position-type: absolute
