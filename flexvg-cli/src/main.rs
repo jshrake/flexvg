@@ -4,8 +4,8 @@ use std::fs::File;
 use std::io::BufReader;
 
 #[derive(Debug, Parser)]
-#[clap(name = "stacked")]
-#[clap(author, version, about = "A CLI for stacked", long_about = None)]
+#[clap(name = "flexvg")]
+#[clap(author, version, about = "Create SVG diagrams with flexbox", long_about = None)]
 struct Cli {
     #[clap(parse(from_os_str))]
     input: std::path::PathBuf,
