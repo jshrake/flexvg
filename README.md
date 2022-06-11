@@ -7,9 +7,12 @@ Create [SVG](https://developer.mozilla.org/en-US/docs/Web/SVG) diagrams with [fl
 ## Usage
 
 ```shell
-cargo run --bin flexvg -- ./examples/simple.yaml
-open ./examples/simple.svg
+cargo run --bin flexvg -- ./examples/platform.yaml
+open ./examples/platform.svg
 ```
+<p align="center">
+<img width="400" height="400" src="./examples/platform.svg">
+</p>
 
 See [./examples](./examples/) for additional examples.
 
