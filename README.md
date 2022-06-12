@@ -2,7 +2,7 @@
 
 Create [SVG](https://developer.mozilla.org/en-US/docs/Web/SVG) diagrams with [flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox).
 
-**WARNING**: This project is a prototype and a work in progress. You may see code that you do not like, or design decisions that you do not agree with.
+**WARNING**: This project is a prototype and a work in progress. 
 
 ## Usage
 
