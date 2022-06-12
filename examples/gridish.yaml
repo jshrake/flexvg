@@ -1,39 +1,39 @@
 ---
-  flex-direction: row
-  justify-content: flex-start
-  width: 100%
-  height: 100%
-  nodes:
-    - flex-direction: column
-      width: 100%
-      height: 100%
-      nodes:
-        - nodes:
+flex-direction: row
+justify-content: flex-start
+width: 100%
+height: 100%
+nodes:
+  - flex-direction: column
+    width: 100%
+    height: 100%
+    nodes:
+      - nodes:
           - text: 🤣
             position-type: absolute
             style: "dominant-baseline:middle; text-anchor:middle"
           - rect: true
             style: "fill:white;stroke:black;stroke-width:1;opacity:0.5;"
             position-type: absolute
-        - nodes:
+      - nodes:
           - text: 👀
             style: "dominant-baseline:middle; text-anchor:middle"
             position-type: absolute
           - rect: true
             style: "fill:red;stroke:black;stroke-width:1;opacity:0.5;"
             position-type: absolute
-    - flex-direction: column
-      width: 100%
-      height: 100%
-      nodes:
-        - nodes:
+  - flex-direction: column
+    width: 100%
+    height: 100%
+    nodes:
+      - nodes:
           - text: 🤪
             style: "dominant-baseline:middle; text-anchor:middle"
             position-type: absolute
           - rect: true
             style: "fill:blue;stroke:black;stroke-width:1;opacity:0.5;"
             position-type: absolute
-        - nodes:
+      - nodes:
           - text: 🤗
             style: "dominant-baseline:middle; text-anchor:middle"
             position-type: absolute

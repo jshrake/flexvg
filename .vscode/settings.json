@@ -3,11 +3,11 @@
     "emeraldwalk.runonsave": {
         "commands": [
             {
-                "match": "\\.(yaml|yml|json)$",
+                "match": "examples\/.*.(yaml|yml|json)$",
                 "cmd": "cargo run --bin flexvg -- ${file}"
             },
             {
-                "match": "\\.(css)$",
+                "match": "./examples/*.(css)$",
                 "cmd": "cargo run --bin flexvg -- $(dirname ${file})/$(basename ${file} .css).yaml"
             }
         ]
