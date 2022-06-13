@@ -20,123 +20,123 @@ rect {
 }
 </style>
 <g>
-<rect id="" class="other" x="20" y="86" width="80" height="14" style=""></rect>
-<text id="" class="" x="60" y="93" style="font-size:0.5em;">os (windows, linux)</text>
+<rect x="20" y="86"  width="80" height="14" position-type="absolute" class="other" ></rect>
+<text x="60" y="93"  width="80" height="14" style="font-size:0.5em;" position-type="absolute" >os (windows, linux)</text>
 </g>
 <g>
-<rect id="" class="other" x="84" y="71" width="16" height="15" style=""></rect>
-<text id="" class="" x="92" y="78.5" style="font-size:0.25em;">gfx</text>
+<rect x="84" y="71"  width="16" height="15" class="other" position-type="absolute" ></rect>
+<text x="92" y="78.5"  width="16" height="15" position-type="absolute" style="font-size:0.25em;" >gfx</text>
 </g>
 <g>
-<rect id="" class="other" x="68" y="71" width="16" height="15" style=""></rect>
-<text id="" class="" x="76" y="78.5" style="font-size:0.25em;">other</text>
+<rect x="68" y="71"  width="16" height="15" class="other" position-type="absolute" ></rect>
+<text x="76" y="78.5"  width="16" height="15" position-type="absolute" style="font-size:0.25em;" >other</text>
 </g>
 <g>
-<rect id="" class="other" x="52" y="71" width="16" height="15" style=""></rect>
-<text id="" class="" x="60" y="78.5" style="font-size:0.25em;">c++</text>
+<rect x="52" y="71"  width="16" height="15" class="other" position-type="absolute" ></rect>
+<text x="60" y="78.5"  width="16" height="15" style="font-size:0.25em;" position-type="absolute" >c++</text>
 </g>
 <g>
-<rect id="" class="other" x="36" y="71" width="16" height="15" style=""></rect>
-<text id="" class="" x="44" y="78.5" style="font-size:0.25em;">python</text>
+<rect x="36" y="71"  width="16" height="15" class="other" position-type="absolute" ></rect>
+<text x="44" y="78.5"  width="16" height="15" position-type="absolute" style="font-size:0.25em;" >python</text>
 </g>
 <g>
-<rect id="" class="other" x="20" y="71" width="16" height="15" style=""></rect>
-<text id="" class="" x="28" y="78.5" style="font-size:0.25em;">git</text>
+<rect x="20" y="71"  width="16" height="15" class="other" position-type="absolute" ></rect>
+<text x="28" y="78.5"  width="16" height="15" style="font-size:0.25em;" position-type="absolute" >git</text>
 </g>
 <g>
-<rect id="" class="green" x="20" y="57" width="80" height="14" style=""></rect>
-<text id="" class="" x="60" y="64" style="font-size:0.5em;">lib</text>
+<rect x="20" y="57"  width="80" height="14" class="green" position-type="absolute" ></rect>
+<text x="60" y="64"  width="80" height="14" position-type="absolute" style="font-size:0.5em;" >lib</text>
 </g>
 <g>
-<rect id="" class="green" x="91" y="43" width="9" height="14" style=""></rect>
-<text id="" class="" x="95.5" y="50" style="font-size:0.25em;writing-mode:tb;">plugin</text>
+<rect x="91" y="43"  width="9" height="14" position-type="absolute" class="green" ></rect>
+<text x="95.5" y="50"  width="9" height="14" position-type="absolute" style="font-size:0.25em;writing-mode:tb;" >plugin</text>
 </g>
 <g>
-<rect id="" class="green" x="82" y="43" width="9" height="14" style=""></rect>
-<text id="" class="" x="86.5" y="50" style="font-size:0.25em;writing-mode:tb;">plugin</text>
+<rect x="82" y="43"  width="9" height="14" position-type="absolute" class="green" ></rect>
+<text x="86.5" y="50"  width="9" height="14" position-type="absolute" style="font-size:0.25em;writing-mode:tb;" >plugin</text>
 </g>
 <g>
-<rect id="" class="green" x="73" y="43" width="9" height="14" style=""></rect>
-<text id="" class="" x="77.5" y="50" style="font-size:0.25em;writing-mode:tb;">plugin</text>
+<rect x="73" y="43"  width="9" height="14" position-type="absolute" class="green" ></rect>
+<text x="77.5" y="50"  width="9" height="14" position-type="absolute" style="font-size:0.25em;writing-mode:tb;" >plugin</text>
 </g>
 <g>
-<rect id="" class="green" x="64" y="43" width="9" height="14" style=""></rect>
-<text id="" class="" x="68.5" y="50" style="font-size:0.25em;writing-mode:tb;">plugin</text>
+<rect x="64" y="43"  width="9" height="14" class="green" position-type="absolute" ></rect>
+<text x="68.5" y="50"  width="9" height="14" style="font-size:0.25em;writing-mode:tb;" position-type="absolute" >plugin</text>
 </g>
 <g>
-<rect id="" class="green" x="56" y="43" width="8" height="14" style=""></rect>
-<text id="" class="" x="60" y="50" style="font-size:0.25em;writing-mode:tb;">plugin</text>
+<rect x="56" y="43"  width="8" height="14" class="green" position-type="absolute" ></rect>
+<text x="60" y="50"  width="8" height="14" style="font-size:0.25em;writing-mode:tb;" position-type="absolute" >plugin</text>
 </g>
 <g>
-<rect id="" class="green" x="47" y="43" width="9" height="14" style=""></rect>
-<text id="" class="" x="51.5" y="50" style="font-size:0.25em;writing-mode:tb;">plugin</text>
+<rect x="47" y="43"  width="9" height="14" class="green" position-type="absolute" ></rect>
+<text x="51.5" y="50"  width="9" height="14" position-type="absolute" style="font-size:0.25em;writing-mode:tb;" >plugin</text>
 </g>
 <g>
-<rect id="" class="green" x="38" y="43" width="9" height="14" style=""></rect>
-<text id="" class="" x="42.5" y="50" style="font-size:0.25em;writing-mode:tb;">plugin</text>
+<rect x="38" y="43"  width="9" height="14" class="green" position-type="absolute" ></rect>
+<text x="42.5" y="50"  width="9" height="14" position-type="absolute" style="font-size:0.25em;writing-mode:tb;" >plugin</text>
 </g>
 <g>
-<rect id="" class="green" x="29" y="43" width="9" height="14" style=""></rect>
-<text id="" class="" x="33.5" y="50" style="font-size:0.25em;writing-mode:tb;">plugin</text>
+<rect x="29" y="43"  width="9" height="14" class="green" position-type="absolute" ></rect>
+<text x="33.5" y="50"  width="9" height="14" style="font-size:0.25em;writing-mode:tb;" position-type="absolute" >plugin</text>
 </g>
 <g>
-<rect id="" class="green" x="20" y="43" width="9" height="14" style=""></rect>
-<text id="" class="" x="24.5" y="50" style="font-size:0.25em;writing-mode:tb;">plugin</text>
+<rect x="20" y="43"  width="9" height="14" class="green" position-type="absolute" ></rect>
+<text x="24.5" y="50"  width="9" height="14" style="font-size:0.25em;writing-mode:tb;" position-type="absolute" >plugin</text>
 </g>
 <g>
-<rect id="" class="green" x="20" y="29" width="80" height="14" style=""></rect>
-<text id="" class="" x="60" y="36" style="font-size:0.5em;">lib</text>
+<rect x="20" y="29"  width="80" height="14" class="green" position-type="absolute" ></rect>
+<text x="60" y="36"  width="80" height="14" position-type="absolute" style="font-size:0.5em;" >lib</text>
 </g>
 <g>
-<rect id="" class="green" x="91" y="14" width="9" height="15" style=""></rect>
-<text id="" class="" x="95.5" y="21.5" style="font-size:0.19em;writing-mode:tb;">extension</text>
+<rect x="91" y="14"  width="9" height="15" class="green" position-type="absolute" ></rect>
+<text x="95.5" y="21.5"  width="9" height="15" position-type="absolute" style="font-size:0.19em;writing-mode:tb;" >extension</text>
 </g>
 <g>
-<rect id="" class="green" x="82" y="14" width="9" height="15" style=""></rect>
-<text id="" class="" x="86.5" y="21.5" style="font-size:0.19em;writing-mode:tb;">extension</text>
+<rect x="82" y="14"  width="9" height="15" class="green" position-type="absolute" ></rect>
+<text x="86.5" y="21.5"  width="9" height="15" position-type="absolute" style="font-size:0.19em;writing-mode:tb;" >extension</text>
 </g>
 <g>
-<rect id="" class="green" x="73" y="14" width="9" height="15" style=""></rect>
-<text id="" class="" x="77.5" y="21.5" style="font-size:0.19em;writing-mode:tb;">extension</text>
+<rect x="73" y="14"  width="9" height="15" class="green" position-type="absolute" ></rect>
+<text x="77.5" y="21.5"  width="9" height="15" style="font-size:0.19em;writing-mode:tb;" position-type="absolute" >extension</text>
 </g>
 <g>
-<rect id="" class="green" x="64" y="14" width="9" height="15" style=""></rect>
-<text id="" class="" x="68.5" y="21.5" style="font-size:0.19em;writing-mode:tb;">extension</text>
+<rect x="64" y="14"  width="9" height="15" class="green" position-type="absolute" ></rect>
+<text x="68.5" y="21.5"  width="9" height="15" style="font-size:0.19em;writing-mode:tb;" position-type="absolute" >extension</text>
 </g>
 <g>
-<rect id="" class="green" x="56" y="14" width="8" height="15" style=""></rect>
-<text id="" class="" x="60" y="21.5" style="font-size:0.19em;writing-mode:tb;">extension</text>
+<rect x="56" y="14"  width="8" height="15" position-type="absolute" class="green" ></rect>
+<text x="60" y="21.5"  width="8" height="15" style="font-size:0.19em;writing-mode:tb;" position-type="absolute" >extension</text>
 </g>
 <g>
-<rect id="" class="green" x="47" y="14" width="9" height="15" style=""></rect>
-<text id="" class="" x="51.5" y="21.5" style="font-size:0.19em;writing-mode:tb;">extension</text>
+<rect x="47" y="14"  width="9" height="15" class="green" position-type="absolute" ></rect>
+<text x="51.5" y="21.5"  width="9" height="15" style="font-size:0.19em;writing-mode:tb;" position-type="absolute" >extension</text>
 </g>
 <g>
-<rect id="" class="green" x="38" y="14" width="9" height="15" style=""></rect>
-<text id="" class="" x="42.5" y="21.5" style="font-size:0.19em;writing-mode:tb;">extension</text>
+<rect x="38" y="14"  width="9" height="15" position-type="absolute" class="green" ></rect>
+<text x="42.5" y="21.5"  width="9" height="15" style="font-size:0.19em;writing-mode:tb;" position-type="absolute" >extension</text>
 </g>
 <g>
-<rect id="" class="green" x="29" y="14" width="9" height="15" style=""></rect>
-<text id="" class="" x="33.5" y="21.5" style="font-size:0.19em;writing-mode:tb;">extension</text>
+<rect x="29" y="14"  width="9" height="15" class="green" position-type="absolute" ></rect>
+<text x="33.5" y="21.5"  width="9" height="15" style="font-size:0.19em;writing-mode:tb;" position-type="absolute" >extension</text>
 </g>
 <g>
-<rect id="" class="green" x="20" y="14" width="9" height="15" style=""></rect>
-<text id="" class="" x="24.5" y="21.5" style="font-size:0.19em;writing-mode:tb;">extension</text>
+<rect x="20" y="14"  width="9" height="15" class="green" position-type="absolute" ></rect>
+<text x="24.5" y="21.5"  width="9" height="15" position-type="absolute" style="font-size:0.19em;writing-mode:tb;" >extension</text>
 </g>
 <g>
-<rect id="" class="green" x="73" y="0" width="27" height="14" style=""></rect>
-<text id="" class="" x="86.5" y="7" style="font-size:0.3em;">app</text>
+<rect x="73" y="0"  width="27" height="14" class="green" position-type="absolute" ></rect>
+<text x="86.5" y="7"  width="27" height="14" position-type="absolute" style="font-size:0.3em;" >app</text>
 </g>
 <g>
-<rect id="" class="green" x="47" y="0" width="26" height="14" style=""></rect>
-<text id="" class="" x="60" y="7" style="font-size:0.3em;">app</text>
+<rect x="47" y="0"  width="26" height="14" position-type="absolute" class="green" ></rect>
+<text x="60" y="7"  width="26" height="14" style="font-size:0.3em;" position-type="absolute" >app</text>
 </g>
 <g>
-<rect id="" class="green" x="20" y="0" width="27" height="14" style=""></rect>
-<text id="" class="" x="33.5" y="7" style="font-size:0.3em;">app</text>
+<rect x="20" y="0"  width="27" height="14" position-type="absolute" class="green" ></rect>
+<text x="33.5" y="7"  width="27" height="14" style="font-size:0.3em;" position-type="absolute" >app</text>
 </g>
 <g>
-<rect id="" class="green" x="0" y="0" width="20" height="43" style=""></rect>
-<text id="" class="" x="10" y="21.5" style="writing-mode:tb;font-size:0.5em;">launcher</text>
+<rect x="0" y="0"  width="20" height="43" class="green" position-type="absolute" ></rect>
+<text x="10" y="21.5"  width="20" height="43" position-type="absolute" style="writing-mode:tb;font-size:0.5em;" >launcher</text>
 </g>
 </svg>

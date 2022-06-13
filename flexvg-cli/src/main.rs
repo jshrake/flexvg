@@ -1,5 +1,6 @@
 use clap::Parser;
 use flexvg::compute_svg_string;
+use log::debug;
 use std::fs::File;
 use std::io::BufReader;
 
@@ -36,6 +37,7 @@ fn main() -> anyhow::Result<()> {
             "unsupported extension, input file must be yaml or json"
         ),
     };
+    debug!("{:?}", root);
     let svg = compute_svg_string(root, Some(base))?;
     let output = args.output.unwrap_or_else(|| {
         let mut path = args.input.clone();

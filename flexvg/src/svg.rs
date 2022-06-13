@@ -45,31 +45,25 @@ fn compute_svg_string_recursive(
     if has_elements {
         writeln!(svg, "<g>").unwrap();
     }
-    if let Some(element) = node.element {
-        match element {
-            FlexElement::Text(el) => {
-                let x = x + 0.5 * node.width + node.position.x;
-                let y = y + 0.5 * node.height + node.position.y;
-                let id = el.global.id;
-                let class = el.global.class;
-                let style = el.global.style;
-                let value = el.text;
-                writeln!(
-                    svg,
-                    r#"<text id="{id}" class="{class}" x="{x}" y="{y}" style="{style}">{value}</text>"#).unwrap();
-            }
-            FlexElement::Rect(el) => {
-                let x = x + node.position.x;
-                let y = y + node.position.y;
-                let w = node.width;
-                let h = node.height;
-                let id = el.global.id;
-                let class = el.global.class;
-                let style = el.global.style;
-                writeln!(svg,
-                    r#"<rect id="{id}" class="{class}" x="{x}" y="{y}" width="{w}" height="{h}" style="{style}"></rect>"#).unwrap();
-            }
+    if let Some(el) = node.element {
+        let mut x = x + node.position.x;
+        let mut y = y + node.position.y;
+        if let Some(origin) = el.origin {
+            x += origin.0 * node.width;
+            y += origin.1 * node.height;
         }
+        let w = node.width;
+        let h = node.height;
+        let element = el.element;
+        let value = el.value.as_deref().unwrap_or("");
+        write!(svg, r#"<{element} x="{x}" y="{y}"  width="{w}" height="{h}" "#)
+            .unwrap();
+        for (attrib_name, attrib_value) in el.attributes.iter() {
+            write!(svg, r#"{attrib_name}="{attrib_value}" "#).unwrap();
+        }
+        write!(svg, r#">"#).unwrap();
+        write!(svg, r#"{value}"#).unwrap();
+        writeln!(svg, r#"</{element}>"#).unwrap();
     }
     let mut children = node.nodes;
     // @NOTE(jshrake): Reverse the children so that the

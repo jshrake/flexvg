@@ -10,10 +10,12 @@ nodes:
     height: 42.85714%
     nodes:
       - nodes:
-          - text: launcher
+          - element: text
+            value: launcher
+            origin: [0.5, 0.5]
             position-type: absolute
             style: "writing-mode:tb;font-size:0.5em;"
-          - rect: true
+          - element: rect
             class: green
             position-type: absolute
   - flex-direction: column
@@ -24,209 +26,267 @@ nodes:
           - width: 100%
             nodes:
               - nodes:
-                  - text: app
+                  - value: app
+                    element: text
+                    origin: [0.5, 0.5]
                     style: "font-size:0.3em;"
                     position-type: absolute
-                  - rect: true
+                  - element: rect
                     class: green
                     position-type: absolute
               - nodes:
-                  - text: app
+                  - value: app
+                    element: text
+                    origin: [0.5, 0.5]
                     style: "font-size:0.3em;"
                     position-type: absolute
-                  - rect: true
+                  - element: rect
                     class: green
                     position-type: absolute
               - nodes:
-                  - text: app
+                  - value: app
+                    element: text
+                    origin: [0.5, 0.5]
                     style: "font-size:0.3em;"
                     position-type: absolute
-                  - rect: true
+                  - element: rect
                     class: green
                     position-type: absolute
       - nodes:
           - nodes:
-              - text: extension
+              - value: extension
+                element: text
+                origin: [0.5, 0.5]
                 style: "font-size:0.19em;writing-mode:tb;"
                 position-type: absolute
-              - rect: true
+              - element: rect
                 class: green
                 position-type: absolute
           - nodes:
-              - text: extension
+              - value: extension
+                element: text
+                origin: [0.5, 0.5]
                 style: "font-size:0.19em;writing-mode:tb;"
                 position-type: absolute
-              - rect: true
+              - element: rect
                 class: green
                 position-type: absolute
           - nodes:
-              - text: extension
+              - value: extension
+                element: text
+                origin: [0.5, 0.5]
                 style: "font-size:0.19em;writing-mode:tb;"
                 position-type: absolute
-              - rect: true
+              - element: rect
                 class: green
                 position-type: absolute
           - nodes:
-              - text: extension
+              - value: extension
+                element: text
+                origin: [0.5, 0.5]
                 style: "font-size:0.19em;writing-mode:tb;"
                 position-type: absolute
-              - rect: true
+              - element: rect
                 class: green
                 position-type: absolute
           - nodes:
-              - text: extension
+              - value: extension
+                element: text
+                origin: [0.5, 0.5]
                 style: "font-size:0.19em;writing-mode:tb;"
                 position-type: absolute
-              - rect: true
+              - element: rect
                 class: green
                 position-type: absolute
           - nodes:
-              - text: extension
+              - value: extension
+                element: text
+                origin: [0.5, 0.5]
                 style: "font-size:0.19em;writing-mode:tb;"
                 position-type: absolute
-              - rect: true
+              - element: rect
                 class: green
                 position-type: absolute
           - nodes:
-              - text: extension
+              - value: extension
+                element: text
+                origin: [0.5, 0.5]
                 style: "font-size:0.19em;writing-mode:tb;"
                 position-type: absolute
-              - rect: true
+              - element: rect
                 class: green
                 position-type: absolute
           - nodes:
-              - text: extension
+              - value: extension
+                element: text
+                origin: [0.5, 0.5]
                 style: "font-size:0.19em;writing-mode:tb;"
                 position-type: absolute
-              - rect: true
+              - element: rect
                 class: green
                 position-type: absolute
           - nodes:
-              - text: extension
+              - value: extension
+                element: text
+                origin: [0.5, 0.5]
                 style: "font-size:0.19em;writing-mode:tb;"
                 position-type: absolute
-              - rect: true
+              - element: rect
                 class: green
                 position-type: absolute
       - nodes:
-          - text: lib
+          - value: lib
+            element: text
+            origin: [0.5, 0.5]
             style: "font-size:0.5em;"
             position-type: absolute
-          - rect: true
+          - element: rect
             class: green
             position-type: absolute
       - nodes:
           - nodes:
-              - text: plugin
+              - value: plugin
+                element: text
+                origin: [0.5, 0.5]
                 style: "font-size:0.25em;writing-mode:tb;"
                 position-type: absolute
-              - rect: true
+              - element: rect
                 class: green
                 position-type: absolute
           - nodes:
-              - text: plugin
+              - value: plugin
+                element: text
+                origin: [0.5, 0.5]
                 style: "font-size:0.25em;writing-mode:tb;"
                 position-type: absolute
-              - rect: true
+              - element: rect
                 class: green
                 position-type: absolute
           - nodes:
-              - text: plugin
+              - value: plugin
+                element: text
+                origin: [0.5, 0.5]
                 style: "font-size:0.25em;writing-mode:tb;"
                 position-type: absolute
-              - rect: true
+              - element: rect
                 class: green
                 position-type: absolute
           - nodes:
-              - text: plugin
+              - value: plugin
+                element: text
+                origin: [0.5, 0.5]
                 style: "font-size:0.25em;writing-mode:tb;"
                 position-type: absolute
-              - rect: true
+              - element: rect
                 class: green
                 position-type: absolute
           - nodes:
-              - text: plugin
+              - value: plugin
+                element: text
+                origin: [0.5, 0.5]
                 style: "font-size:0.25em;writing-mode:tb;"
                 position-type: absolute
-              - rect: true
+              - element: rect
                 class: green
                 position-type: absolute
           - nodes:
-              - text: plugin
+              - value: plugin
+                element: text
+                origin: [0.5, 0.5]
                 style: "font-size:0.25em;writing-mode:tb;"
                 position-type: absolute
-              - rect: true
+              - element: rect
                 class: green
                 position-type: absolute
           - nodes:
-              - text: plugin
+              - value: plugin
+                element: text
+                origin: [0.5, 0.5]
                 style: "font-size:0.25em;writing-mode:tb;"
                 position-type: absolute
-              - rect: true
+              - element: rect
                 class: green
                 position-type: absolute
           - nodes:
-              - text: plugin
+              - value: plugin
+                element: text
+                origin: [0.5, 0.5]
                 style: "font-size:0.25em;writing-mode:tb;"
                 position-type: absolute
-              - rect: true
+              - element: rect
                 class: green
                 position-type: absolute
           - nodes:
-              - text: plugin
+              - value: plugin
+                element: text
+                origin: [0.5, 0.5]
                 style: "font-size:0.25em;writing-mode:tb;"
                 position-type: absolute
-              - rect: true
+              - element: rect
                 class: green
                 position-type: absolute
       - nodes:
-          - text: lib
+          - value: lib
+            element: text
+            origin: [0.5, 0.5]
             style: "font-size:0.5em;"
             position-type: absolute
-          - rect: true
+          - element: rect
             class: green
             position-type: absolute
       - width: 100%
         nodes:
           - nodes:
-              - text: git
+              - value: git
+                element: text
+                origin: [0.5, 0.5]
                 style: "font-size:0.25em;"
                 position-type: absolute
-              - rect: true
+              - element: rect
                 class: other
                 position-type: absolute
           - nodes:
-              - text: python
+              - value: python
+                element: text
+                origin: [0.5, 0.5]
                 style: "font-size:0.25em;"
                 position-type: absolute
-              - rect: true
+              - element: rect
                 class: other
                 position-type: absolute
           - nodes:
-              - text: c++
+              - value: c++
+                element: text
+                origin: [0.5, 0.5]
                 style: "font-size:0.25em;"
                 position-type: absolute
-              - rect: true
+              - element: rect
                 class: other
                 position-type: absolute
           - nodes:
-              - text: other
+              - value: other
+                element: text
+                origin: [0.5, 0.5]
                 style: "font-size:0.25em;"
                 position-type: absolute
-              - rect: true
+              - element: rect
                 class: other
                 position-type: absolute
           - nodes:
-              - text: gfx
+              - value: gfx
+                element: text
+                origin: [0.5, 0.5]
                 style: "font-size:0.25em;"
                 position-type: absolute
-              - rect: true
+              - element: rect
                 class: other
                 position-type: absolute
       - nodes:
-          - text: os (windows, linux)
+          - value: os (windows, linux)
+            element: text
+            origin: [0.5, 0.5]
             style: "font-size:0.5em;"
             position-type: absolute
-          - rect: true
+          - element: rect
             class: other
             position-type: absolute

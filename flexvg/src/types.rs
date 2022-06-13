@@ -9,6 +9,7 @@ use serde::{
     de::{value::StringDeserializer, DeserializeOwned, IntoDeserializer},
     Deserialize, Deserializer,
 };
+use std::collections::HashMap;
 #[cfg(feature = "serde")]
 use std::str::FromStr;
 use taffy::node::Node as TaffyNode;
@@ -91,104 +92,32 @@ pub struct FlexGeomNode {
 */
 #[derive(Debug, Clone, PartialEq)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-#[cfg_attr(feature = "serde", serde(untagged))]
-pub enum FlexElement {
-    Text(FlexText),
-    Rect(FlexRect),
-}
-
-/*
-8888888888 888                          d8888 888    888            d8b 888
-888        888                         d88888 888    888            Y8P 888
-888        888                        d88P888 888    888                888
-8888888    888  .d88b.  888  888     d88P 888 888888 888888 888d888 888 88888b.  .d8888b
-888        888 d8P  Y8b `Y8bd8P'    d88P  888 888    888    888P"   888 888 "88b 88K
-888        888 88888888   X88K     d88P   888 888    888    888     888 888  888 "Y8888b.
-888        888 Y8b.     .d8""8b.  d8888888888 Y88b.  Y88b.  888     888 888 d88P      X88
-888        888  "Y8888  888  888 d88P     888  "Y888  "Y888 888     888 88888P"   88888P'
- */
-
-#[derive(Default, Debug, Clone, PartialEq)]
-#[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-#[cfg_attr(feature = "serde", serde(default))]
-pub struct FlexGlobalAttribs {
-    pub id: String,
-    pub class: String,
-    pub style: String,
-}
-
-/*
-8888888888 888               88888888888                888
-888        888                   888                    888
-888        888                   888                    888
-8888888    888  .d88b.  888  888 888   .d88b.  888  888 888888
-888        888 d8P  Y8b `Y8bd8P' 888  d8P  Y8b `Y8bd8P' 888
-888        888 88888888   X88K   888  88888888   X88K   888
-888        888 Y8b.     .d8""8b. 888  Y8b.     .d8""8b. Y88b.
-888        888  "Y8888  888  888 888   "Y8888  888  888  "Y888
-
- */
-
-#[derive(Default, Debug, Clone, PartialEq)]
-#[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-pub struct FlexText {
+pub struct FlexElement {
+    pub element: String,
+    pub origin: Option<(f32, f32)>,
+    pub value: Option<String>,
     #[cfg_attr(feature = "serde", serde(flatten))]
-    pub global: FlexGlobalAttribs,
-    #[cfg_attr(feature = "serde", serde(flatten))]
-    pub attribs: FlexTextAttribs,
-    pub text: String,
+    pub attributes: HashMap<String, FlexElementAttributeValue>,
 }
-
-#[derive(Default, Debug, Clone, PartialEq)]
-#[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-#[cfg_attr(all(feature = "serde"), serde(rename_all = "kebab-case"))]
-#[cfg_attr(feature = "serde", serde(default))]
-pub struct FlexTextAttribs {}
 
 #[derive(Debug, Clone, PartialEq)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-#[cfg_attr(all(feature = "serde"), serde(rename_all = "kebab-case"))]
-pub enum FlexSvgTextAnchor {
-    Start,
-    Middle,
-    End,
+#[cfg_attr(feature = "serde", serde(untagged))]
+pub enum FlexElementAttributeValue {
+    String(String),
+    F32(f32),
+    I32(i32),
 }
 
-impl Default for FlexSvgTextAnchor {
-    fn default() -> Self {
-        Self::Middle
+impl std::fmt::Display for FlexElementAttributeValue {
+    // This trait requires `fmt` with this exact signature.
+    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+        match self {
+            FlexElementAttributeValue::String(x) => write!(f, "{}", x),
+            FlexElementAttributeValue::F32(x) => write!(f, "{}", x),
+            FlexElementAttributeValue::I32(x) => write!(f, "{}", x),
+        }
     }
-}
-
-/*
-8888888888 888                   8888888b.                   888
-888        888                   888   Y88b                  888
-888        888                   888    888                  888
-8888888    888  .d88b.  888  888 888   d88P .d88b.   .d8888b 888888
-888        888 d8P  Y8b `Y8bd8P' 8888888P" d8P  Y8b d88P"    888
-888        888 88888888   X88K   888 T88b  88888888 888      888
-888        888 Y8b.     .d8""8b. 888  T88b Y8b.     Y88b.    Y88b.
-888        888  "Y8888  888  888 888   T88b "Y8888   "Y8888P  "Y888
-
-
-
- */
-#[derive(Default, Debug, Clone, PartialEq)]
-#[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-pub struct FlexRect {
-    #[cfg_attr(feature = "serde", serde(flatten))]
-    pub global: FlexGlobalAttribs,
-    #[cfg_attr(feature = "serde", serde(flatten))]
-    pub attribs: FlexRectAttribs,
-    pub rect: bool,
-}
-
-#[derive(Default, Debug, Clone, PartialEq)]
-#[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-#[cfg_attr(feature = "serde", serde(default))]
-pub struct FlexRectAttribs {
-    pub rx: FlexDimension,
-    pub ry: FlexDimension,
 }
 
 /*
@@ -259,7 +188,7 @@ pub struct FlexLayout {
     pub border: Rect<Dimension>,
     pub flex_grow: f32,
     pub flex_shrink: f32,
-    pub flex_basis: Dimension,
+    pub flex_basis: FlexDimension,
     #[cfg_attr(feature = "serde", serde(flatten))]
     pub size: FlexSize<FlexDimension>,
     pub min_size: Size<Dimension>,
@@ -284,7 +213,7 @@ impl Default for FlexLayout {
             border: Default::default(),
             flex_grow: 0.0,
             flex_shrink: 1.0,
-            flex_basis: Dimension::Auto,
+            flex_basis: FlexDimension::Auto,
             size: Default::default(),
             min_size: Default::default(),
             max_size: Default::default(),
@@ -310,7 +239,7 @@ impl From<FlexLayout> for Style {
             border: s.border,
             flex_grow: s.flex_grow,
             flex_shrink: s.flex_shrink,
-            flex_basis: s.flex_basis,
+            flex_basis: s.flex_basis.into(),
             size: s.size.into(),
             min_size: s.min_size,
             max_size: s.max_size,

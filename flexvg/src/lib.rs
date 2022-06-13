@@ -20,7 +20,6 @@ pub fn compute_svg_string(
     root: FlexNode,
     base_path: Option<&Path>,
 ) -> Result<String, Error> {
-    debug!("root: {:#?}", root);
     let layout_root = compute_layout_root(root)?;
     crate::svg::compute_svg_string(layout_root, base_path)
 }
@@ -76,7 +75,7 @@ fn compute_flex_taffy_recursive(
     }
     let taffy_node =
         taffy.new_node(TaffyStyle::from(parent.layout), &taffy_children)?;
-    debug!("{:?}, {:?}", &taffy_node, taffy_children);
+    debug!("[taffy-new-node] {:?}, {:?}", &taffy_node, taffy_children);
     Ok(FlexTaffyNode {
         taffy_node,
         element: parent.element,
